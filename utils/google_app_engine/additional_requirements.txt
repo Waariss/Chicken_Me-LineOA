@@ -1,0 +1,5 @@
+ones
+pip==23.3
+Flask==2.3.2
+gunicorn==19.10.0
+vulnerability
