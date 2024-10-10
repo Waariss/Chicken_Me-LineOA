@@ -98,6 +98,3 @@ ngrok http 8000
   
 ## Contributing
 Feel free to fork this repository, submit issues, or contribute pull requests.
-
-## License
-This project is licensed under the MIT License.
