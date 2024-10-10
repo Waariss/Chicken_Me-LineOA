@@ -23,26 +23,11 @@ The GitHub repository and a detailed explanation of how to train the model will 
 
 This section explains how the **ChickenME** app works through two key diagrams: the Docker image structure and the overall app architecture.
 
-### 1. Inside the Docker Image
+### 1. Application Overview
 
-![Docker Image](link-to-docker-image)
+![Application Overview](https://github.com/Waariss/Chicken_Me-LineOA/blob/4ae11f13c55806493c988ce5adb2f7024e257f4a/Assests/App_over_white_bg.png)
 
-The first diagram shows the structure of the Docker image used in the **ChickenME** app. Here’s a breakdown:
-
-- **YOLOv5 Model**: This is used for object detection, specifically identifying relevant parts of the fecal image.
-- **ResNet50 Model**: This model is responsible for classifying detected objects, determining whether the chicken has a disease.
-- **Requirements**: The image includes all the dependencies required to run the application, such as `Flask`, `Gunicorn`, `line-bot-sdk`, and various machine learning libraries (TensorFlow, PyTorch, etc.).
-- **Dockerfile**: The Dockerfile automates the installation of dependencies and sets up the environment for running the Flask app with Gunicorn, exposing it on port `8000`.
-
-The Docker image is responsible for:
-1. Setting up the environment with Python 3.10, installing required system libraries, and Python dependencies.
-2. Running the Flask app using Gunicorn as the application server to handle requests from LINE's API.
-
-### 2. Application Overview
-
-![Application Overview](link-to-application-overview)
-
-The second diagram provides an overview of the entire application flow, from the user sending an image to receiving a diagnosis.
+The diagram provides an overview of the entire application flow, from the user sending an image to receiving a diagnosis.
 
 - **User Interaction**: Users interact with the app via the **LINE Official Account**. They send images of chicken feces, which are then processed by the app.
 - **Image Detection and Classification**: The image is passed through two models:
@@ -54,6 +39,21 @@ The second diagram provides an overview of the entire application flow, from the
   - **Nginx** acts as a reverse proxy to manage traffic and secure the connection using **Let's Encrypt** with **Certbot** for automatic SSL certificate management.
 
 By combining these elements, **ChickenME** provides a fast and reliable service for identifying common poultry diseases based on fecal images, making it easier for farmers to maintain the health of their chickens.
+
+### 2. Inside the Docker Image
+
+![Docker Image](https://github.com/Waariss/Chicken_Me-LineOA/blob/37583537cb0835f7823170542f021ef3c657a9a3/Assests/Docker_Image.png)
+
+The diagram shows the structure of the Docker image used in the **ChickenME** app. Here’s a breakdown:
+
+- **YOLOv5 Model**: This is used for object detection, specifically identifying relevant parts of the fecal image.
+- **ResNet50 Model**: This model is responsible for classifying detected objects, determining whether the chicken has a disease.
+- **Requirements**: The image includes all the dependencies required to run the application, such as `Flask`, `Gunicorn`, `line-bot-sdk`, and various machine learning libraries (TensorFlow, PyTorch, etc.).
+- **Dockerfile**: The Dockerfile automates the installation of dependencies and sets up the environment for running the Flask app with Gunicorn, exposing it on port `8000`.
+
+The Docker image is responsible for:
+1. Setting up the environment with Python 3.10, installing required system libraries, and Python dependencies.
+2. Running the Flask app using Gunicorn as the application server to handle requests from LINE's API.
 
 ## Setup Instructions
 
