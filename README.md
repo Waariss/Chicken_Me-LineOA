@@ -40,17 +40,6 @@ To run the project, follow these steps:
    python line_up_fix.py
    ```
 
-5. **Set up the Webhook in Line Developers Console**:
-   - Go to the Line Developers Console.
-   - In the Messaging API section, configure the Webhook settings.
-   - Set the Webhook URL to point to your server (or use Ngrok for local testing).
-   - Enable the **Use Webhook** option.
-
-   To test locally, you can use **Ngrok** to expose your server to the internet:
-   ```bash
-   ngrok http 8000
-   ```
-
 ### 2. Docker Setup (Optional)
 You can also run the project using Docker. Use the following command to pull the Docker image and run it:
 
@@ -58,12 +47,24 @@ You can also run the project using Docker. Use the following command to pull the
 docker pull waaris/line
 docker run -p 8000:8000 -e LINE_CHANNEL_SECRET='<Your_Line_Channel_Secret>' -e LINE_CHANNEL_ACCESS_TOKEN='<Your_Line_Channel_Access_Token>' waaris/line:latest
 ```
-
 ### 3. Downloading the Pre-trained Model
 The pre-trained models for both object detection and classification are required. You can download the models from [Google Drive](https://drive.google.com/drive/folders/1FlIJu6P79gaXv6O37tYnRBv-afmvCCm-?usp=sharing) and place them in the appropriate directories.
 
 - YOLOv5 model: `Fold_FINAL.pt`
 - TensorFlow classification model: `best_model_improved.keras`
+
+### 4. Webhook Setup
+Once the server is running, you will need to set up the webhook in the Line Developers Console:
+
+- Go to the **Line Developers Console**.
+- In the **Messaging API** section, configure the **Webhook** settings.
+- Set the **Webhook URL** to point to your server (or use **Ngrok** for local testing).
+- Enable the **Use Webhook** option.
+
+To test locally, you can use **Ngrok** to expose your server to the internet:
+```bash
+ngrok http 8000
+```
 
 ## How It Works
 
