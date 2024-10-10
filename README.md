@@ -1,7 +1,17 @@
 # 🐔 ChickenME 🐣: Classification of Chicken Diseases From Fecal Images Via Line Office Account
 
 ## Overview
-This repository contains the code for the ChickenME project, which uses a Line Office Account (LineOA) to help classify chicken diseases based on fecal images. The system leverages machine learning models to perform object detection (using YOLOv5) and disease classification, delivering results directly through the Line messaging app.
+This repository contains the code for the **ChickenME** project, a mobile-based tool designed to assist local farmers in identifying common poultry diseases through the analysis of fecal images. By leveraging machine learning models, the system classifies chicken diseases and offers preliminary diagnoses via a user-friendly interface integrated into a LINE official account.
+
+The project achieved **86.49% segmentation mean average precision** and **95.93% classification accuracy** using a comprehensive open database. ChickenME provides a cost-effective alternative to traditional diagnostic methods, distinguishing between diseased and healthy samples, helping farmers make informed decisions about poultry health.
+
+### Key Contributors:
+- **Developed by**: Waris Damkham, Pattanan Korkiattrakool
+- **Advisor**: Asst. Prof. Dr. Piyanuch Silapachote
+- **Co-Advisor**: Asst. Prof. Dr. Ananta Srisuphab
+- **Institution**: Mahidol University, Faculty of Information and Communication Technology
+
+---
 
 ## Setup Instructions
 
@@ -10,8 +20,8 @@ To run the project, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/Waariss/Chicken_Me-LineOA.git
+   cd Chicken_Me-LineOA
    ```
 
 2. **Install dependencies**:
