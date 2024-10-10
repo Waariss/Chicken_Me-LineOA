@@ -5,6 +5,8 @@ This repository contains the code for the **ChickenME** project, a mobile-based 
 
 The project achieved **86.49% segmentation mean average precision** and **95.93% classification accuracy** using a comprehensive open database. ChickenME provides a cost-effective alternative to traditional diagnostic methods, distinguishing between diseased and healthy samples, helping farmers make informed decisions about poultry health.
 
+**Publication**: Accepted at IEEE Region 10 Conference 2024 (TENCON 2024) under the title *Practical Mobile Based Services for Identification of Chicken Diseases From Fecal Images*.
+
 ### Key Contributors:
 - **Developed by**: Waris Damkham, Pattanan Korkiattrakool
 - **Advisor**: Asst. Prof. Dr. Piyanuch Silapachote
